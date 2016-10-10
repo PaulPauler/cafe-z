@@ -51,3 +51,10 @@ $this->title = 'My Yii Application';
 
     </div>
 </div>
+
+
+<?php
+
+    //var_dump(Yii::$app->request);
+
+ ?>
