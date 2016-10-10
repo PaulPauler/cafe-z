@@ -29,5 +29,3 @@ phpunit.phar
 #Custom project settings
 /config/*
 
-/cfg/*
-
