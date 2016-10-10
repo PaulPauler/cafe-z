@@ -27,6 +27,6 @@ phpunit.phar
 /phpunit.xml
 
 #Custom project settings
-/config/*
+#/config/*
 /web/assets/*
 
