@@ -5,4 +5,5 @@ into project directory
 "proj/config"
 "proj/web"
 
+after deploy init production with ~/init.sh
 
