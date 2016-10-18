@@ -124,8 +124,11 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionSay($message = 'Hello!')
+    public function actionSay()
     {
+        $message = 'No GET';
+        if(isset($_GET["word"])) $message = $_GET["word"];
+
         return $this->render('say', ['message' => $message]);
     }
 
