@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha&subset=cyrillic');
+
 html,
 body {
     height: 100%;
@@ -11,8 +13,116 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    width: 1300px;
 }
+
+.container-top {
+    height: 190px;
+    width: 100%;
+    background-image: url("/img/header_bg.png");
+}
+
+.bg_mosaic {
+    margin: 0 auto;
+    position: absolute;
+    width: 1040px;
+    height: 575px;
+    z-index: -100;
+    background-image: url("/img/mosaic.png");
+}
+
+.site-content {
+    margin: 0 auto;
+    padding: 30px 10px 0 10px;
+    width: 80%;
+    background-image: url("/img/mosaic.png");
+
+    min-height: 600px;
+}
+
+.menu-line {
+    width: 100%;
+    height: 34px;
+    background-color: #ef7f1a;
+}
+
+    .navbar-menu {
+        float:right;
+        list-style: none;
+        margin-right: 255px;
+
+    }
+        .navbar-menu > li {
+            float: left;
+            font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+            font-size: 21px;
+            text-transform: uppercase;
+        }
+            .navbar-menu > li > a {
+                padding: 5px 10px;
+                color: #fefefe;
+            }
+
+.header-logo {
+    margin-top: 60px;
+    margin-left: 150px;
+    height: 210px;
+    width: 265px;
+    z-index: 30;
+    background-image: url("/img/logo.png");
+    position: absolute;
+}
+
+.neon {
+    margin-top: 90px;
+    margin-left: 415px;
+    width: 654px;
+    height: 100px;
+    background-image: url("/img/neon.png");
+    position: absolute;
+}
+
+.slideshow-wrapper {
+    height: 400px;
+    width: 100%;
+    font-size: 21px;
+    font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+    .slide_left {
+        float: left;
+        width: 40%;
+    }
+
+    .slide_right {
+        float: right;
+        width: 60%;
+    }
+
+    .off {
+        display: none;
+    }
+
+    .off2 {
+        display: none;
+    }
+
+.interior_warp {
+    width: 100%;
+    height: 7px;
+    background-color: #ef7f1a;
+}
+
+.interior {
+    width: 1000px;
+    height: 507px;
+    background-image: url("/img/interior.png");
+}
+
+
+
+
+
+
 
 .footer {
     height: 60px;

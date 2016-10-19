@@ -55,6 +55,8 @@ $config = [
                 'say/<word>' => 'site/say',
                 'entry' => 'site/entry',
                 'captcha' => 'site/captcha',
+                'img' => 'img', //static
+                'js' => 'js', //static
             ],
         ],
 
