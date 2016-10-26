@@ -36,7 +36,9 @@ AppAsset::register($this);
             ?>
 
             <div class="container-top">
-                <div class="header-logo"></div>
+                <div class="header-logo">
+                    <a href="/"><img height="210" width="265" src="/img/logo.png"/></a>
+                </div>
                 <div class="neon"></div>
             </div>
             <div class="menu-line">
@@ -45,9 +47,9 @@ AppAsset::register($this);
                     'options' => ['class' => 'navbar-menu'], //navbar-menu
                     'items' => [
                         ['label' => 'Главная', 'url' => ['/site/index']],
-                        ['label' => 'Меню', 'url' => ['/site/about']],
-                        ['label' => 'Фотографии', 'url' => ['/site/about']],
-                        ['label' => 'Контакты', 'url' => ['/site/contact']],
+                        ['label' => 'Меню', 'url' => ['/site/menu']],
+                        ['label' => 'Фотографии', 'url' => ['/site/news']],
+                        ['label' => 'Контакты', 'url' => ['/site/about']],
                         ['label' => 'Обратная связь', 'url' => ['/site/contact']],
                         // Yii::$app->user->isGuest ? (
                         //     ['label' => 'Login', 'url' => ['/site/login']]
