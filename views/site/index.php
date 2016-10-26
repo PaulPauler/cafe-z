@@ -61,7 +61,7 @@ $this->title = 'Столовая "Застольник"';
 
 <script>
     $( '.simple-slide-show' ).simpleSlideShow({
-      autoplay: 80000,
+      autoplay: 5000,
       effect: 'slide', //fade,slide
       controls: true,
       index: false,
