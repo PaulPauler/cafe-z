@@ -12,15 +12,6 @@
 			autosize: true
 		}, options );
 
-		//очередной ебучий хак
-		setTimeout( function(){
-			$('.off').removeClass("off");
-		}, 4300 );
-		setTimeout( function(){
-			$('.off2').removeClass("off2");
-		}, 8600 );
-		//конец ебучего хака
-
 		return this.each( function(){
 			var $container = $( this ),
 				$slide = $container.children( 'ul' ).children( 'li' ),
@@ -34,8 +25,8 @@
 							parseFloat( $slide.css( 'transition-duration' ) ) * 1000;
 			var directions =
 				settings.controls ?
-					'<button type="button" class="slide-control prev"></button>' +
-					'<button type="button" class="slide-control next"></button>'
+					'<button class="slide-control prev"><div></div></button>' +
+					'<button class="slide-control next"><div></div></button>'
 						: '';
 			var index = '';
 			if( settings.index ){
@@ -54,7 +45,7 @@
 					5000 : // default
 						settings.autoplay;
 
-			$container.addClass( 'simple-slide-show loading' );
+			$container.addClass( 'simple-slide-show' );
 			if( settings.effect == 'fade' )
 				$container.addClass( 'fade' );
 			$container.children( 'ul' ).children( 'li:first-child' ).addClass( 'on' );
@@ -202,16 +193,16 @@
 
 			// loading
 			$( window ).on( 'load', function(){
-				if( $container.hasClass( 'loading' ) ){
-					$container.removeClass( 'loading' );
+				if( !$container.hasClass( 'simple-slide-show-ready' ) ){
+					$container.addClass( 'simple-slide-show-ready' );
 					if( settings.autoplay )
 						autoPlay = setInterval( autoPlayFn, speed + slideTransition );
 				}
 			} );
 			// hacky fallback if window load never resolves:
 			setTimeout( function(){
-				if( $container.hasClass( 'loading' ) ){
-					$container.removeClass( 'loading' );
+				if( !$container.hasClass( 'simple-slide-show-ready' ) ){
+					$container.addClass( 'simple-slide-show-ready' );
 					if( settings.autoplay )
 						autoPlay = setInterval( autoPlayFn, speed + slideTransition );
 				}

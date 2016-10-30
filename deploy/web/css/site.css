@@ -31,11 +31,19 @@ body {
     background-image: url("/img/mosaic.png");
 }
 
+    .msc {
+        background-image: url("/img/mosaic.png");
+        background-position: -10px -30px !important;
+        background-size: inherit !important;
+    }
+
 .site-content {
     margin: 0 auto;
     padding: 30px 10px 0 10px;
     width: 80%;
     background-image: url("/img/mosaic.png");
+    font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+    font-size: 20px;
 
     min-height: 600px;
 }
@@ -68,8 +76,8 @@ body {
     margin-left: 150px;
     height: 210px;
     width: 265px;
-    z-index: 30;
-    background-image: url("/img/logo.png");
+    z-index: 300;
+    /*background-image: url("/img/logo.png");*/
     position: absolute;
 }
 
@@ -85,7 +93,7 @@ body {
 .slideshow-wrapper {
     height: 400px;
     width: 100%;
-    font-size: 21px;
+    font-size: 20px;
     font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
 }
     .slide_left {
@@ -96,14 +104,6 @@ body {
     .slide_right {
         float: right;
         width: 60%;
-    }
-
-    .off {
-        display: none;
-    }
-
-    .off2 {
-        display: none;
     }
 
 .interior_warp {
