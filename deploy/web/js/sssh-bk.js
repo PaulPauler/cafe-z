@@ -18,6 +18,11 @@
 				slideCount = $slide.length,
 				animating = false,
 				slideTransition = 0;
+			if( $slide.css( 'transition-duration' ) )
+				var slideTransition =
+					( $slide.css( 'transition-duration' ).indexOf( 'ms' ) > -1 ) ?
+						parseFloat( $slide.css( 'transition-duration' ) ) :
+							parseFloat( $slide.css( 'transition-duration' ) ) * 1000;
 			var directions =
 				settings.controls ?
 					'<button class="slide-control prev"><div></div></button>' +
@@ -35,7 +40,6 @@
 				}
 				index = '<ol class="slide-index">' + slideMarks + '<div class="index-underline"></div></ol>';
 			}
-			$container.append( directions + index );
 			var speed =
 				settings.autoplay === true ?
 					5000 : // default
@@ -44,10 +48,8 @@
 			$container.addClass( 'simple-slide-show' );
 			if( settings.effect == 'fade' )
 				$container.addClass( 'fade' );
-
 			$container.children( 'ul' ).children( 'li:first-child' ).addClass( 'on' );
-			if( settings.effect == 'slide' )
-				$container.children( 'ul' ).children( 'li:not( .on )' ).addClass( 'to-left-init' );
+			$container.append( directions + index );
 
 			function slideForward( current ){
 				if( settings.effect == 'fade' )
@@ -87,7 +89,7 @@
 			}
 			function slideIn( i, direction ){
 				$slide.eq( i )
-					.removeClass( 'to-left-init to-left to-right' )
+					.removeClass( 'to-left to-right' )
 					.addClass( 'on from-' + direction );
 			}
 			function slideOut( i, direction ){
@@ -190,22 +192,21 @@
 			}
 
 			// loading
-			function loaded(){
+			$( window ).on( 'load', function(){
 				if( !$container.hasClass( 'simple-slide-show-ready' ) ){
 					$container.addClass( 'simple-slide-show-ready' );
-					if( $slide.css( 'transition-duration' ) )
-						slideTransition =
-							( $slide.css( 'transition-duration' ).indexOf( 'ms' ) > -1 ) ?
-								parseFloat( $slide.css( 'transition-duration' ) ) :
-									parseFloat( $slide.css( 'transition-duration' ) ) * 1000;
-
 					if( settings.autoplay )
 						autoPlay = setInterval( autoPlayFn, speed + slideTransition );
 				}
-			}
-			$( window ).on( 'load', loaded );
+			} );
 			// hacky fallback if window load never resolves:
-			setTimeout( loaded, 4000 );
+			setTimeout( function(){
+				if( !$container.hasClass( 'simple-slide-show-ready' ) ){
+					$container.addClass( 'simple-slide-show-ready' );
+					if( settings.autoplay )
+						autoPlay = setInterval( autoPlayFn, speed + slideTransition );
+				}
+			}, 4000 );
 
 			if( settings.autosize ){
 				function slideHeights(){

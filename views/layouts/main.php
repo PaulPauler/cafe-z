@@ -24,23 +24,16 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-
-
     <div class="wrap">
-
-        <div class="container">
-
-            <?php //echo Breadcrumbs::widget([
-                //'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                //]) 
-            ?>
-
+        <div class="container-top-wrap">
             <div class="container-top">
                 <div class="header-logo">
-                    <a href="/"><img height="210" width="265" src="/img/logo.png"/></a>
+                    <a href="/"><img height="178" width="225" src="/img/logo.png"/></a>
                 </div>
                 <div class="neon"></div>
             </div>
+        </div>
+        <div class="menu-line-wrap">
             <div class="menu-line">
                 <?php
                 echo Nav::widget([
@@ -67,24 +60,20 @@ AppAsset::register($this);
                 ]);
                 ?>
             </div>
-
+        </div>
+        <div class="container">
             <div class="site-content">
                 <?= $content ?>
             </div>
-
         </div>
-        
     </div>
-
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">Застольник, г.Ейск &copy; <?= date('Y') ?></p>
+            <p class="pull-left"><i style="color:#ddd">Лучшая в мире</i> Столовая Застольник, г.Ейск &copy; <?= date('Y') ?></p>
 
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
-
-
 
 <?php $this->endBody() ?>
 </body>

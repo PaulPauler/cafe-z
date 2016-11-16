@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Neucha&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-html,
-body {
+html, body, .wrap, .wrap-center {
     height: 100%;
 }
 
@@ -10,17 +10,23 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background-image: url("/img/mosaic.png");
 }
 
 .wrap > .container {
-    width: 1300px;
+    padding: 0;
+    width: 1118px;
 }
-
-.container-top {
-    height: 190px;
-    width: 100%;
-    background-image: url("/img/header_bg.png");
-}
+    .container-top-wrap {
+        width: 100%;
+        background-color: #44ae59;
+    }
+        .container-top {
+            height: 140px;
+            width: 1118px;
+            margin: 0 auto;
+            background-image: url("/img/header_bg.png");
+        }
 
 .bg_mosaic {
     margin: 0 auto;
@@ -32,69 +38,78 @@ body {
 }
 
     .msc {
-        background-image: url("/img/mosaic.png");
-        background-position: -10px -30px !important;
-        background-size: inherit !important;
+        background-color: transparent;
     }
 
 .site-content {
     margin: 0 auto;
     padding: 30px 10px 0 10px;
     width: 80%;
-    background-image: url("/img/mosaic.png");
+    /*background-color: #fff;*/
+    /*background-image: url("/img/mosaic.png");*/
     font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
-    font-size: 20px;
-
-    min-height: 600px;
+    font-size: 18px;
+    height: 100%;
 }
 
-.menu-line {
+.menu-line-wrap {
     width: 100%;
-    height: 34px;
     background-color: #ef7f1a;
 }
 
-    .navbar-menu {
-        float:right;
-        list-style: none;
-        margin-right: 255px;
-
+    .menu-line {
+        width: 1118px;
+        height: 24px;
+        margin: 0 auto;
+        background-color: #ef7f1a;
     }
-        .navbar-menu > li {
-            float: left;
-            font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
-            font-size: 21px;
-            text-transform: uppercase;
+
+        .navbar-menu {
+            float:right;
+            list-style: none;
+            margin-right: 190px;
+
         }
-            .navbar-menu > li > a {
-                padding: 5px 10px;
-                color: #fefefe;
+            .navbar-menu > li {
+                float: left;
+                font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+                font-size: 19px;
+                text-transform: uppercase;
             }
+                .navbar-menu > li > a {
+                    padding: 2px 8px;
+                    color: #fefefe;
+                }
+
+                .navbar-menu > li > a:hover {
+                    padding: 0 8px;
+                    background-color: #44ae59;
+                }
 
 .header-logo {
-    margin-top: 60px;
-    margin-left: 150px;
-    height: 210px;
-    width: 265px;
+    margin-top: 40px;
+    margin-left: 190px;
+    height: 178px;
+    width: 225px;
     z-index: 300;
-    /*background-image: url("/img/logo.png");*/
     position: absolute;
 }
 
 .neon {
-    margin-top: 90px;
-    margin-left: 415px;
-    width: 654px;
-    height: 100px;
+    margin-top: 72px;
+    margin-left: 425px;
+    width: 450px;
+    height: 65px;
     background-image: url("/img/neon.png");
     position: absolute;
 }
 
 .slideshow-wrapper {
-    height: 400px;
-    width: 100%;
-    font-size: 20px;
+    height: 320px;
+    width: 98%;
+    font-size: 18px;
     font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+    z-index: 130;
 }
     .slide_left {
         float: left;
@@ -106,21 +121,45 @@ body {
         width: 60%;
     }
 
+    .slide_right img {
+        margin-top: -20px;
+    }
+
+    .slide2_left {
+        float: left;
+        width: 60%;
+    }
+
+    .slide2_right {
+        text-align: center;
+        float: right;
+        width: 40%;
+    }
+
+    .slide2_left img {
+        margin-left: -30px;
+    }
+
 .interior_warp {
     width: 100%;
     height: 7px;
     background-color: #ef7f1a;
 }
 
-.interior {
-    width: 1000px;
-    height: 507px;
-    background-image: url("/img/interior.png");
+    .interior {
+        text-align: center;
+        width: 875px;
+        height: 420px;
+    }
+
+    .interior img {
+        border: 3px solid #ef7f1a;
+    }
+
+.note {
+    font-size: 90%;
+    text-align: center;
 }
-
-
-
-
 
 
 

@@ -21,24 +21,29 @@ $this->title = 'Столовая "Застольник"';
     <div class="body-content">
 
         <div class="slideshow-wrapper">
-            <div class="simple-slide-show loading" style="height:400px">
+            <div class="simple-slide-show loading" style="height:330px">
                 <ul>
                     <li class="on">
                         <figure class="msc">
                             <div class="slide_left">
                                 <h1 style="padding-left:40px">Супер сосиски!</h1>
                                 <p>Самые вкусные сосиски с пюрешкой и огуречно-помидорным салатом ищите в столовой "Застольник" в городе Ейске. Только в ноябре скидка 20% при покупке трех сосисок и компота. Спешите!<i style="color:#ccc">*</i></p>
-                                <p style="padding-top:10px;color:#ccc;font-size: 90%;float:right">*Предложение ограничено</p>
+                                <p style="padding-top:10px;color:#bbb;font-size: 90%;float:right">*Предложение ограничено</p>
                             </div>
                             <div class="slide_right">
-                                <img src="/img/slide1.png"/>
+                                <img height="310" width="450" src="/img/slide1.png"/>
                             </div>
                         </figure>
                     </li>
                     <li>
                         <figure class="msc">
-                            <h1>Пироги с доставкой</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis quam, sodales eget efficitur quis, imperdiet vel massa. Proin malesuada mattis est sit amet rhoncus. Sed molestie, velit id iaculis ultricies, risus dui rhoncus nunc, a posuere libero velit tempor diam. Morbi lectus justo, rhoncus nec pulvinar in, pellentesque nec risus. Phasellus at arcu congue, eleifend leo sed, lacinia nisl. Phasellus eget tellus vel lectus tincidunt tempor. Nam ac odio at ligula luctus finibus. Curabitur leo turpis, sodales non efficitur a, auctor vel enim. Donec eu lacus tempus, blandit velit ut, porttitor justo. Morbi consectetur leo eu aliquet faucibus. Aliquam suscipit malesuada tellus, sit amet feugiat nisl.</p>
+                            <div class="slide2_left">
+                                <img height="282" width="450" src="/img/slide2.png"/>
+                            </div>
+                            <div class="slide2_right">
+                                <h1>Пироги с доставкой</h1>
+                                <p>Разнообразные начинки, три вида теста. Эти свежие, горячие и такие манящие пироги никого не оставят равнодушными!</p>
+                            </div>
                         </figure>
                     </li>
                     <li>
@@ -51,10 +56,14 @@ $this->title = 'Столовая "Застольник"';
             </div>
         </div>
 
+        <div class="interior">
+            <img height="400" width="760" src="/img/interior.png"/>
+        </div>
 
-        <div class="interior_warp"></div>
-        <div class="interior"></div>
-        <div class="interior_warp"></div>
+        <div class="note">
+            <p style="color:#aaa;">Краснодарский край, г. Ейск, ул. Вильгельма Де Геннина, 37. тел. +7(86132) 74-74-73<br/><a href="/about">Как нас найти</a></p>
+        </div>
+
 
     </div>
 </div>
