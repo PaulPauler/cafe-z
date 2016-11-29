@@ -20,10 +20,13 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/simple-slide-show.css',
+        'css/unite-gallery.css',
     ];
     public $js = [
         //'js/jquery-3.1.1.min.js',
         'js/simple-slide-show.js',
+        'js/unitegallery.min.js',
+        'js/ug-theme-tiles.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -71,7 +71,7 @@ AppAsset::register($this);
         <div class="container">
             <p class="pull-left"><i style="color:#ddd">Лучшая в мире</i> Столовая Застольник, г.Ейск &copy; <?= date('Y') ?></p>
 
-            <p class="pull-right"><?= Yii::powered() ?></p>
+            <p class="pull-right">Звоните: +7 (86132) 3-81-14</p>
         </div>
     </footer>
 

@@ -68,21 +68,31 @@ html, body, .wrap, .wrap-center {
             float:right;
             list-style: none;
             margin-right: 190px;
+            font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
+            font-size: 18px;
+            line-height: 1.3;
+            text-transform: uppercase;
 
         }
             .navbar-menu > li {
                 float: left;
-                font-family: "Neucha", "Helvetica Neue", Helvetica, Arial, cursive;
-                font-size: 19px;
-                text-transform: uppercase;
             }
                 .navbar-menu > li > a {
                     padding: 2px 8px;
                     color: #fefefe;
                 }
 
+                .navbar-menu .active {
+
+                }
+
                 .navbar-menu > li > a:hover {
-                    padding: 0 8px;
+                    padding: 1px 8px;
+                    background-color: #44ae59;
+                }
+
+                .navbar-menu > li > a:active {
+                    padding: 1px 8px;
                     background-color: #44ae59;
                 }
 
