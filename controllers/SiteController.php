@@ -10,6 +10,9 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\EntryForm;
 
+use app\models\MenuItem;
+use app\models\MenuCategory;
+
 class SiteController extends Controller
 {
     /**
@@ -29,12 +32,14 @@ class SiteController extends Controller
                     ],
                 ],
             ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
+
+            // Разрешает принимать на страницу только POST-запрос. Если запрос не удовлетворен, HTTP:405
+            // 'verbs' => [
+            //     'class' => VerbFilter::className(),
+            //     'actions' => [
+            //         'logout' => ['post'],
+            //     ],
+            // ],
         ];
     }
 
@@ -72,12 +77,12 @@ class SiteController extends Controller
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->render('/menu/main');
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->render('/menu/main');
         }
         return $this->render('login', [
             'model' => $model,
@@ -91,6 +96,7 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+
         Yii::$app->user->logout();
 
         return $this->goHome();
@@ -126,20 +132,18 @@ class SiteController extends Controller
 
     public function actionMenu()
     {
-        return $this->render('menu');
+        $category_data = MenuCategory::find()->where(["is_active" => "1"])->all();
+        $item_data = MenuItem::find()->where(["is_active" => 1])->orderBy("position")->all();
+
+        return $this->render('menu', [
+            'category_data' => $category_data,
+            'item_data' => $item_data,
+        ]);
     }
 
-    public function actionNews()
+    public function actionGallery()
     {
-        return $this->render('news');
-    }
-
-    public function actionSay()
-    {
-        $message = 'No GET';
-        if(isset($_GET["word"])) $message = $_GET["word"];
-
-        return $this->render('say', ['message' => $message]);
+        return $this->render('gallery');
     }
 
     public function actionEntry()

@@ -49,7 +49,7 @@ $config = [
                 '/' => 'site/index',
                 'about' => 'site/about',
                 'menu' => 'site/menu',
-                'news' => 'site/news',
+                'gallery' => 'site/gallery',
                 'contact' => 'site/contact',
                 'login' => 'site/login',
                 'logout' => 'site/logout',
@@ -57,8 +57,28 @@ $config = [
                 'say/<word>' => 'site/say',
                 'entry' => 'site/entry',
                 'captcha' => 'site/captcha',
-                'img' => 'img', //static
-                'js' => 'js', //static
+                
+                //admin menu CRUD
+                'admin' => 'site/login',
+                
+                'admin/main' => 'menu/item/main',
+
+                'admin/menu' => 'menu/item/index',
+                'admin/menu/item/index' => 'menu/item/index',
+                'admin/menu/item/create' => 'menu/item/create',
+                'admin/menu/item/view' => 'menu/item/view',
+                'admin/menu/item/update' => 'menu/item/update',
+                'admin/menu/item/delete' => 'menu/item/delete',
+                
+                'admin/menu/category/index' => 'menu/category/index',
+                'admin/menu/category/create' => 'menu/category/create',
+                'admin/menu/category/view' => 'menu/category/view',
+                'admin/menu/category/delete' => 'menu/category/delete',
+                'admin/menu/category/update' => 'menu/category/update',
+
+                //static
+                'img' => 'img',
+                'js' => 'js'
             ],
         ],
 

@@ -16,20 +16,20 @@ $this->title = 'Напишите нам';
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
-        <div class="alert alert-success">
-            Спасибо за обратную связь. Мы обязательно ответим вам!
+        <div class="alert alert-success" style="text-align: center">
+            Спасибо за обратную связь. Мы обязательно ответим Вам!<br/>
+            Вернуться <a href="/">на главную страницу.</a>
         </div>
 
     <?php else: ?>
 
-        <p>
-            Если у вас есть какие то вопросы, пожелания или может быть даже жалобы, пожалуйста, заполните форму обратной связи и мы обязательно ответим вам, когда прочтём.
-            <br/>
+        <p style="text-align: center">
+            Если у вас есть какие то вопросы или пожелания, пожалуйста, заполните форму обратной связи и мы обязательно ответим Вам, когда прочтём.
             Спасибо!
         </p>
 
-        <div class="row">
-            <div class="col-lg-5">
+        <div class="row" style="width:100%; padding: 0 150px">
+            <div class="col-lg-5" style="width:100%">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
@@ -46,7 +46,7 @@ $this->title = 'Напишите нам';
                     ]) ?>
 
                     <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>

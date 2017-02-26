@@ -23,14 +23,17 @@ class ContactForm extends Model
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha'],
+            ['name', 'required', 'message' => 'Пожалуйста, введите имя'],
+            ['email', 'required', 'message' => 'Необходимо вести адрес электронной почты'],
+            ['subject', 'required', 'message' => 'Необходимо ввести тему вопроса'],
+            ['body', 'required', 'message' => 'Необходимо ввести текст обращения'],
         ];
     }
+
 
     /**
      * @return array customized attribute labels
@@ -38,7 +41,11 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Введите код с картинки',
+            'verifyCode' => 'Введите код верификации',
+            'name' => 'Ваше имя',
+            'email' => 'Email',
+            'subject' => 'Тема вопроса',
+            'body' => 'Текст вопроса',
         ];
     }
 
