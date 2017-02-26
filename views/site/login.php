@@ -11,6 +11,7 @@ $this->title = 'Войти';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
+
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Введите данные авторизации:</p>
@@ -40,7 +41,4 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 
-    <div class="col-lg-offset-1" style="color:#999;">
-        Можно войти с помощью <strong>admin/123456</strong>.<br>
-    </div>
 </div>
